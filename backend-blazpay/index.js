@@ -9,7 +9,7 @@ const { numberController } = require('./Controllers/numberController');
 const app = express();
 
 const corsConfiguration = {
-  origin: ["http://localhost:5173", "https://blazpay-internship-assignment.vercel.app"],
+  origin: ["http://localhost:5173"],
   credentials: true,
 };
 
