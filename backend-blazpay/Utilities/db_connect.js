@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 if (!process.env.MONGO_URI) {
@@ -25,7 +26,13 @@ async function dbConnect() {
             return mongoose;
         });
     }
-    cached.conn = await cached.promise;
+    try {
+        cached.conn = await cached.promise;
+    } catch (e) {
+        cached.promise = null;
+        throw e;
+    }
+
     return cached.conn;
 }
 
