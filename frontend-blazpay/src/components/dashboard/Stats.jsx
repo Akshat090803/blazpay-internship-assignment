@@ -1,6 +1,6 @@
 
 import layer1 from "../../assets/Layer_1.png"
-import layer2 from "../../assets/Layer_2.png"
+import layer2 from "../../assets/layer_2.png"
 const Stats = ({statsData})=>{
 console.log('das',statsData[0] , statsData[0].value)
 if(!statsData) return;
