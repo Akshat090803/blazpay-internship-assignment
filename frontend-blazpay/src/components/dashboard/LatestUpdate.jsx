@@ -40,7 +40,7 @@ const LatestUpdate = () => {
 
     try {
       //------------------------for running locally , use this URL ------------------------------------------
-      
+
       // const response = await fetch("http://localhost:8080/api/waitlist", {
       //   method: "POST",
       //   headers: { "Content-Type": "application/json" },
@@ -48,7 +48,7 @@ const LatestUpdate = () => {
       // });
 
       //-------------------------------------------------------------------------------------------
-      const response = await fetch("https://blazpay-internship-assignment-cvjz.vercel.app", {
+      const response = await fetch("https://blazpay-internship-assignment-cvjz.vercel.app/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: emailInput }),
@@ -77,7 +77,7 @@ const LatestUpdate = () => {
       //------------------------for running locally , use this URL ------------------------------------------
       // const response = await fetch("http://localhost:8080/api/waitlist/count"); 
       //-------------------------------------------------------------------------------------------
-      const response = await fetch("https://blazpay-internship-assignment-cvjz.vercel.app");
+      const response = await fetch("https://blazpay-internship-assignment-cvjz.vercel.app/api/waitlist/count");
 
       if (!response.ok) {
         console.log("Internal Server error");

@@ -23,7 +23,11 @@ function App() {
   const fetchNumericData = async()=>{
     try {
          setLoading(true)
-          const response = await fetch('http://localhost:8080/api/data');
+          //------------------------for running locally , use this URL ------------------------------------------
+          // const response = await fetch('http://localhost:8080/api/data');
+          //----------------------------------------------------------------------------------------------
+          
+          const response = await fetch('https://blazpay-internship-assignment-cvjz.vercel.app/api/data');
            
           if(!response.ok){
             toast.error('Failed to fetch numeric data');
